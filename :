@@ -1,0 +1,2 @@
+#to print all the env variables in an os.
+cat /proc/$PID/environ
