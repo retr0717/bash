@@ -21,3 +21,8 @@ if [ $UID -ne 0 ]; then
 else
 	echo "Root user"
 fi
+
+#prepend function to be defined in .bashrc file
+prepend() {
+	[ -d "$2" ] && eval $1=\"$2':'\$$1\" && export $1 #has a problem if occuring : is the path variable is empty
+}
